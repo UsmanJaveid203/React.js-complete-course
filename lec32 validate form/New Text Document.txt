@@ -1,0 +1,52 @@
+import React,{useState} from 'react';
+var namee=/^[A-za-z ]{3,15}$/;
+var emaill=/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+var passs=/^[a-zA-z1-9 ]{2,8}$/;
+export default function Form() {
+    const[values,setValue]=useState({
+        name:"",
+        pass:"",
+        email:""
+    });
+    const[ename,setEname]=useState("");
+    const[epass,setEpass]=useState("");
+    const[eemail,setEemail]=useState("");
+
+    const ChangeValue=(event)=>{
+        let key=event.target.name;
+        let val=event.target.value;
+        setValue((preVal)=>{
+            console.log(preVal);
+            return{
+                ...preVal,
+                [key]:val
+            }
+        })
+    }
+
+    
+    const submit=()=>{
+      if(!values.name.match(namee)){
+        setEname("user name length should greater then 3 and less then 15")
+      }else if(!values.pass.match(passs)){
+        setEpass("password length should greater then 2 and less then 8")
+        setTimeout(() => {
+          setEpass("")
+        }, 3000);
+      }else if(!values.email.match(emaill)){
+        setEemail("Invalid Email")
+      }
+    }
+    
+    return (
+        <div>
+            <input type="text"  name="name" placeholder="Enter Your Name" value={values.name} onChange={ChangeValue}/>
+            <br/>{ename !== "" ? <span>ename</span> : null}<br/>
+            <input type="pass"  name="pass" placeholder="Enter Your Password" value={values.pass} onChange={ChangeValue}/>
+            <br/>{epass !== "" ?<span>{epass}</span> : null}<br/>
+            <input type="email"  name="email" placeholder="Enter Your Gmail" value={values.gmail} onChange={ChangeValue}/>
+            {eemail !== "" ? <span>eemail</span> : null}<br/><br/>
+            <button onClick={submit}>Submit</button>
+        </div>
+    )
+}

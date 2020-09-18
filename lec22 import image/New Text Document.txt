@@ -1,0 +1,13 @@
+import React from 'react';
+export default function app() {
+    return (
+        <>
+            {/* from public */}
+            <img width="300px" src={process.env.PUBLIC_URL+"/a.jpg"} alt="photo" />
+            {/* from src */}
+            <img width="300px" src="./a.jpg" alt="photo" />
+
+            
+        </>
+    )
+}

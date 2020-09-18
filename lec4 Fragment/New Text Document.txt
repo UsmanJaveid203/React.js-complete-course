@@ -1,0 +1,27 @@
+import React ,{ Component,Fragment } from 'react';
+import './App.css';
+
+// first method
+class App extends Component {
+  render() {
+    return (
+      <Fragment>
+        <h1>Hello I am Here</h1>
+      </Fragment>
+    )
+  }
+}
+
+
+// second method
+class App extends Component {
+  render() {
+    return (
+      <>
+        <h1>Hello I am Here</h1>
+      </>
+    )
+  }
+}
+
+export default App;

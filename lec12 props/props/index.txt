@@ -1,0 +1,39 @@
+import React ,{Component}from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+// function Employee(props) {
+//   return (
+//     <div>
+//       <h1>Hello Employee</h1>
+//       <h3>Name = {props.name}</h3>
+//       <h3>ID = {props.empid}</h3>
+//     </div>
+//   )
+// }
+
+ 
+class Employee extends Component {
+  render(){
+  return (
+    <div>
+      <h1>Hello Employee</h1>
+      <h3>Name = {this.props.name}</h3>
+      <h3>ID = {this.props.empid}</h3>
+      <h3>Age = {this.props.age}</h3>
+      <App name='usama javed' empid={185206}/>
+    </div>
+  ) 
+}}
+Employee.defaultProps={
+  name:'usman javed',
+  empid:185203,
+  age: 20
+}
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Employee name="Usman Bin Javed" empid={185204} />
+  </React.StrictMode>,
+  document.getElementById('root')
+);

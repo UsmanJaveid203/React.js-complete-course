@@ -1,0 +1,39 @@
+import React,{Fragment } from 'react';
+import Propss from './component/Array in react/Array';
+import Data from './component/Array in react/javascrip code';
+
+// var i=1;
+// if(i>0){
+//     console.log(i);
+// }else{
+//     console.log(i);
+// }
+export default function app() {
+    var i=1;
+if(i>0){
+    console.log(i);
+}else{
+    console.log(i);
+}
+    return (
+        <>
+            <h1>List of Top 5 netfix series </h1>
+        </>
+    )
+}
+
+
+// ternary operator
+import React,{Fragment } from 'react';
+
+var i=1;
+
+// (i>0)?console.log(i):console.log(i)
+export default function app() {
+    (i>0)?console.log(i):console.log(i)
+    return (
+        <>
+            <h1>List of Top 5 netfix series </h1>
+        </>
+    )
+}

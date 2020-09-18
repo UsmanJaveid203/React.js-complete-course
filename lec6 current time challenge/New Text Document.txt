@@ -1,0 +1,13 @@
+import React,{Fragment} from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+var today = new Date();
+
+ReactDOM.render(
+  <>
+    <h1>My Name Is Usman Javed</h1>
+    <p>current date = {`${today.toLocaleDateString()}`}</p>
+    <p>current time = {`${today.toLocaleTimeString()}`}</p>
+  </>,
+  document.getElementById('root')
+);

@@ -1,0 +1,14 @@
+import React,{Fragment} from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+const fname= "Muhammad";
+const lname="(P.B.U.H)";
+
+ReactDOM.render(
+  <>
+    <h1>{`Prophet ${fname} ${lname}`}</h1>,
+    <p>Prophet Mohammad is the last Prophet of Allah.</p>
+  </>,
+  document.getElementById('root')
+);

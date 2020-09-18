@@ -1,0 +1,24 @@
+import React ,{Component,Fragment}from 'react';
+import ReactDOM from 'react-dom';
+// import App from './App';
+import prop from 'prop-types'
+
+class Employee extends Component{
+  render(){
+    return(
+      <Fragment>
+        <h1>Name : {this.props.name}</h1>
+      </Fragment>
+    )
+  }
+}
+Employee.propsTpes={
+  name:prop.string.isRequired
+}
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Employee name="Usman Bin Javed"/>
+  </React.StrictMode>,
+  document.getElementById('root')
+);

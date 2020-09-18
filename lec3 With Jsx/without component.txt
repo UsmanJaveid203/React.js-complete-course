@@ -1,0 +1,19 @@
+ReactDOM.render(
+  <div>
+    <h1>Prophet Mohammad(P.B.U.H)</h1>
+    <p>Prophet Mohammad is the last Prophet of Allah.</p>
+  </div>,
+  document.getElementById('root')
+);
+
+
+ReactDOM.render(
+  [
+    <h1>Prophet Mohammad(P.B.U.H)</h1>,
+    <p>Prophet Mohammad is the last Prophet of Allah.</p>
+  ],
+  document.getElementById('root')
+);
+
+
+

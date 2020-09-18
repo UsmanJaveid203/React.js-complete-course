@@ -1,0 +1,19 @@
+import React from 'react';
+
+class Employee extends React.Component{
+    UNSAFE_componentWillMount(){
+        console.log("Employee Component console")
+    }
+
+    componentDidMount(){
+        
+    }
+    render(){
+        return(
+            <>
+                <h1>Employee Component</h1>
+            </>
+        )
+    }
+}
+export default Employee; 
